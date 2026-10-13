@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8b151b">
+  <meta name="description" content="Hướng dẫn thủ tục cấp Phiếu lý lịch tư pháp và liên kết văn bản pháp luật tham khảo.">
+  <title>Hướng dẫn cấp Phiếu lý lịch tư pháp | Thái Nguyên</title>
+  <style>
+    :root {
+      --red: #8b151b;
+      --red-dark: #651016;
+      --gold: #c8a45d;
+      --cream: #fbf8f1;
+      --ink: #22262b;
+      --muted: #5d6670;
+      --line: #e5dfd4;
+      --white: #fff;
+      --green: #1f6548;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; color: var(--ink); background: #f1eee8;
+      font-family: Arial, Helvetica, sans-serif; line-height: 1.62;
+    }
+    a { color: #174f86; overflow-wrap: anywhere; }
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 3px solid #e2b94e; outline-offset: 3px;
+    }
+    .topline { height: 5px; background: var(--gold); }
+    header {
+      color: var(--white);
+      background: linear-gradient(130deg, var(--red-dark), var(--red) 65%, #a42a2e);
+      border-bottom: 4px solid var(--gold);
+    }
+    .header-inner, main, footer { width: min(100% - 32px, 960px); margin: 0 auto; }
+    .header-inner { padding: 28px 0 30px; text-align: center; }
+    .agency { margin: 0; font-weight: 800; letter-spacing: .06em; font-size: .98rem; }
+    .department { margin: 3px 0 18px; font-size: .9rem; letter-spacing: .04em; }
+    .emblem {
+      width: 66px; height: 66px; margin: 0 auto 14px; display: grid; place-items: center;
+      border: 2px solid var(--gold); border-radius: 50%; color: #ffe6a2;
+      font-size: 2rem; font-weight: bold;
+    }
+    h1 { font-size: clamp(1.55rem, 4.6vw, 2.45rem); line-height: 1.22; margin: 0; }
+    .subtitle { max-width: 650px; margin: 12px auto 0; color: #f8e9e1; }
+    main { padding: 24px 0 40px; }
+    .notice {
+      background: #fff8e8; border: 1px solid #ead7a7; border-left: 5px solid var(--gold);
+      padding: 14px 16px; border-radius: 10px; margin-bottom: 20px;
+    }
+    .notice strong { color: var(--red-dark); }
+    .quicklinks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 24px; }
+    .quicklinks a {
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      min-height: 58px; padding: 12px; background: var(--white); border: 1px solid var(--line);
+      border-radius: 10px; text-decoration: none; font-weight: 700;
+    }
+    .quicklinks a:hover { border-color: var(--gold); background: #fffdf8; }
+    section.panel {
+      background: var(--white); border: 1px solid var(--line); border-radius: 14px;
+      padding: clamp(18px, 3.4vw, 28px); margin: 0 0 18px;
+      box-shadow: 0 4px 18px rgba(38, 31, 20, .035);
+    }
+    h2 { margin: 0 0 18px; color: var(--red); font-size: clamp(1.25rem, 3vw, 1.55rem); line-height: 1.3; }
+    h3 { margin: 20px 0 8px; font-size: 1.08rem; color: #333; }
+    h3:first-of-type { margin-top: 0; }
+    p { margin: 8px 0; }
+    ul { padding-left: 22px; margin: 8px 0 14px; }
+    li { padding-left: 3px; margin: 5px 0; }
+    .step {
+      display: inline-grid; place-items: center; width: 29px; height: 29px; margin-right: 8px;
+      border-radius: 50%; background: var(--red); color: white; font-size: .9rem;
+    }
+    .info-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .info-box { border: 1px solid var(--line); background: var(--cream); padding: 14px; border-radius: 10px; }
+    .info-box strong { display: block; color: var(--red-dark); margin-bottom: 3px; }
+    .contact { background: #edf6f0; border-color: #cce2d3; }
+    .phone { color: var(--green); font-size: 1.25rem; font-weight: 800; text-decoration: none; }
+    .law-list { display: grid; gap: 12px; }
+    .law {
+      border: 1px solid var(--line); border-radius: 10px; padding: 15px 16px;
+      display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px;
+    }
+    .law h3 { margin: 0 0 4px; font-size: 1rem; }
+    .law p { margin: 0; color: var(--muted); font-size: .91rem; }
+    .law a.button {
+      display: inline-block; background: var(--red); color: white; text-decoration: none;
+      border-radius: 8px; padding: 9px 13px; font-weight: 700; white-space: nowrap;
+    }
+    .law a.button:hover { background: var(--red-dark); }
+    .small { font-size: .9rem; color: var(--muted); }
+    footer { text-align: center; color: var(--muted); padding: 4px 0 28px; font-size: .9rem; }
+    .updated { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 20px; }
+    @media (max-width: 650px) {
+      .quicklinks { grid-template-columns: 1fr; gap: 8px; }
+      .quicklinks a { min-height: 48px; }
+      .info-grid { grid-template-columns: 1fr; }
+      .law { grid-template-columns: 1fr; }
+      .law a.button { text-align: center; }
+      .header-inner, main, footer { width: min(100% - 22px, 960px); }
+    }
+    @media print {
+      body { background: white; }
+      .quicklinks { display: none; }
+      section.panel { box-shadow: none; break-inside: avoid; }
+      a { color: black; }
+      .law a.button { background: white; color: black; border: 1px solid #555; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"></div>
+  <header>
+    <div class="header-inner">
+      <div class="emblem" aria-hidden="true">★</div>
+      <p class="agency">CÔNG AN TỈNH THÁI NGUYÊN</p>
+      <p class="department">PHÒNG HỒ SƠ NGHIỆP VỤ</p>
+      <h1>HƯỚNG DẪN THỦ TỤC<br>CẤP PHIẾU LÝ LỊCH TƯ PHÁP</h1>
+      <p class="subtitle">Thông tin tham khảo giúp người dân chuẩn bị hồ sơ, lựa chọn cách nộp và tra cứu văn bản pháp luật liên quan.</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="notice">
+      <strong>Lưu ý:</strong> Nội dung trên trang được tổng hợp để tuyên truyền, hướng dẫn ban đầu. Thành phần hồ sơ, thẩm quyền tiếp nhận, lệ phí và thời hạn có thể thay đổi theo quy định hiện hành. Vui lòng kiểm tra thông tin tại cơ quan tiếp nhận trước khi nộp hồ sơ.
+    </div>
+
+    <nav class="quicklinks" aria-label="Điều hướng nhanh">
+      <a href="#doi-tuong">Đối tượng thực hiện</a>
+      <a href="#ho-so">Hồ sơ cần chuẩn bị</a>
+      <a href="#van-ban">Văn bản pháp luật</a>
+    </nav>
+
+    <section class="panel" id="doi-tuong">
+      <h2><span class="step">1</span>Đối tượng thực hiện</h2>
+      <ul>
+        <li>Công dân Việt Nam đủ điều kiện và có yêu cầu cấp Phiếu lý lịch tư pháp.</li>
+        <li>Người nước ngoài đã hoặc đang cư trú tại Việt Nam.</li>
+        <li>Cơ quan, tổ chức có thẩm quyền yêu cầu cấp Phiếu lý lịch tư pháp theo quy định của pháp luật.</li>
+      </ul>
+    </section>
+
+    <section class="panel" id="ho-so">
+      <h2><span class="step">2</span>Hồ sơ cần chuẩn bị</h2>
+      <h3>2.1. Cá nhân yêu cầu cấp Phiếu lý lịch tư pháp</h3>
+      <ul>
+        <li>Tờ khai yêu cầu cấp Phiếu theo mẫu.</li>
+        <li>Căn cước công dân/Căn cước/Hộ chiếu: bản sao chứng thực hoặc bản gốc để đối chiếu theo hướng dẫn của cơ quan tiếp nhận.</li>
+        <li>Giấy tờ chứng minh thuộc trường hợp được miễn, giảm phí (nếu có).</li>
+      </ul>
+      <h3>2.2. Trường hợp ủy quyền</h3>
+      <ul>
+        <li>Thực hiện theo quy định pháp luật hiện hành về ủy quyền.</li>
+        <li>Trường hợp người được ủy quyền là cha, mẹ, vợ, chồng hoặc con của người yêu cầu, thực hiện theo quy định hiện hành và hướng dẫn của cơ quan tiếp nhận.</li>
+      </ul>
+    </section>
+
+    <section class="panel" id="nop-ho-so">
+      <h2><span class="step">3</span>Phương thức nộp hồ sơ</h2>
+      <div class="info-grid">
+        <div class="info-box">
+          <strong>Nộp trực tuyến</strong>
+          Thực hiện qua VNeID hoặc Cổng Dịch vụ công Quốc gia theo chức năng được cung cấp.
+          <p><a href="https://dichvucong.gov.vn/" target="_blank" rel="noopener noreferrer">Mở Cổng Dịch vụ công Quốc gia ↗</a></p>
+        </div>
+        <div class="info-box">
+          <strong>Nộp trực tiếp</strong>
+          Theo thông tin hướng dẫn được cung cấp: Bộ phận tiếp công dân, số 17 đường Đội Cấn, phường Phan Đình Phùng, tỉnh Thái Nguyên. Vui lòng xác nhận địa điểm tiếp nhận hiện hành trước khi đến.
+        </div>
+        <div class="info-box">
+          <strong>Qua dịch vụ bưu chính</strong>
+          Thực hiện theo quy định và hướng dẫn của cơ quan có thẩm quyền tiếp nhận hồ sơ.
+        </div>
+        <div class="info-box">
+          <strong>Thời hạn giải quyết (tham khảo)</strong>
+          Thông thường: 05 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ. Trường hợp cần xác minh theo quy định: không quá 15 ngày. Thời hạn cụ thể áp dụng theo quy định hiện hành.
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="le-phi">
+      <h2><span class="step">4</span>Lệ phí và nhận kết quả</h2>
+      <ul>
+        <li><strong>Lệ phí:</strong> Áp dụng mức thu, miễn, giảm phí cấp Phiếu lý lịch tư pháp theo quy định hiện hành.</li>
+        <li><strong>Nhận kết quả:</strong> Bản điện tử hoặc bản giấy theo hình thức đăng ký và quy định hiện hành.</li>
+      </ul>
+      <div class="notice" style="margin: 14px 0 0;">
+        <strong>Khuyến cáo:</strong> Chỉ nộp đúng số tiền phí, lệ phí được thông báo theo quy định. Không nộp thêm khoản tiền ngoài quy định, không sử dụng dịch vụ trung gian không rõ ràng.
+      </div>
+    </section>
+
+    <section class="panel" id="khuyen-cao">
+      <h2><span class="step">5</span>Khuyến cáo và hỗ trợ</h2>
+      <ul>
+        <li>Kiểm tra kỹ thông tin cá nhân trước khi gửi hồ sơ.</li>
+        <li>Chuẩn bị giấy tờ theo hướng dẫn của cơ quan tiếp nhận; không gửi giấy tờ cá nhân cho các trang hoặc tài khoản không xác thực.</li>
+        <li>Khi gặp khó khăn, liên hệ cán bộ tiếp nhận hồ sơ hoặc xác minh lại số điện thoại và địa chỉ trước khi sử dụng.</li>
+      </ul>
+      <div class="info-box contact">
+        <strong>Thông tin liên hệ được cung cấp</strong>
+        <a class="phone" href="tel:02083755005">0208.375.5005</a>
+        <p class="small">Vui lòng xác nhận số điện thoại này còn hiệu lực trước khi in và công bố rộng rãi.</p>
+      </div>
+    </section>
+
+    <section class="panel" id="van-ban">
+      <h2>Văn bản pháp luật liên quan</h2>
+      <p class="small">Chọn “Đọc văn bản” để mở đường dẫn do đơn vị cung cấp. Tình trạng hiệu lực và văn bản sửa đổi, bổ sung cần được kiểm tra tại nguồn chính thức.</p>
+      <div class="law-list">
+        <article class="law">
+          <div>
+            <h3>1. Luật số 28/2009/QH12 của Quốc hội — Luật Lý lịch tư pháp</h3>
+            <p>Văn bản về lý lịch tư pháp.</p>
+          </div>
+          <a class="button" href="https://vanban.chinhphu.vn/default.aspx?pageid=27160&amp;docid=91028" target="_blank" rel="noopener noreferrer">Đọc văn bản ↗</a>
+        </article>
+        <article class="law">
+          <div>
+            <h3>2. Luật số 68/2020/QH14 của Quốc hội — Luật Cư trú</h3>
+            <p>Văn bản pháp luật về cư trú (kiểm tra tên và số hiệu trước khi phát hành).</p>
+          </div>
+          <a class="button" href="https://vanban.chinhphu.vn/?pageid=27160&amp;docid=202609&amp;classid=1&amp;typegroupid=3" target="_blank" rel="noopener noreferrer">Đọc văn bản ↗</a>
+        </article>
+        <article class="law">
+          <div>
+            <h3>3. Luật số 107/2025/QH15 của Quốc hội — Luật sửa đổi, bổ sung một số điều của Luật Lý lịch tư pháp</h3>
+            <p>Văn bản sửa đổi, bổ sung được cung cấp trong tài liệu hướng dẫn.</p>
+          </div>
+          <a class="button" href="https://vanban.chinhphu.vn/?pageid=27160&amp;docid=216571&amp;classid=1&amp;orggroupid=1" target="_blank" rel="noopener noreferrer">Đọc văn bản ↗</a>
+        </article>
+        <article class="law">
+          <div>
+            <h3>4. Nghị định số 216/2026/NĐ-CP của Chính phủ — Quy định chi tiết và hướng dẫn thi hành một số điều của Luật Lý lịch tư pháp</h3>
+            <p>Vui lòng kiểm tra số hiệu, ngày ban hành và hiệu lực tại nguồn chính thức trước khi sử dụng.</p>
+          </div>
+          <a class="button" href="https://vanban.chinhphu.vn/?pageid=27160&amp;docid=218523" target="_blank" rel="noopener noreferrer">Đọc văn bản ↗</a>
+        </article>
+        <article class="law">
+          <div>
+            <h3>5. Luật số 100/2015/QH13 của Quốc hội — Bộ luật Hình sự</h3>
+            <p>Văn bản pháp luật hình sự.</p>
+          </div>
+          <a class="button" href="https://vanban.chinhphu.vn/default.aspx?pageid=27160&amp;docid=183216" target="_blank" rel="noopener noreferrer">Đọc văn bản ↗</a>
+        </article>
+        <article class="law">
+          <div>
+            <h3>6. Thông tư số 16/2025/TT-BTC của Bộ Tài chính — Quy định mức thu, chế độ thu, nộp, quản lý và sử dụng phí cung cấp thông tin lý lịch tư pháp</h3>
+            <p>Văn bản về phí cung cấp thông tin lý lịch tư pháp.</p>
+          </div>
+          <a class="button" href="https://chinhphu.vn/?pageid=27160&amp;docid=213475" target="_blank" rel="noopener noreferrer">Đọc văn bản ↗</a>
+        </article>
+      </div>
+      <p class="updated small">Nguồn liên kết: các địa chỉ do đơn vị cung cấp. Trang này không thay thế văn bản pháp luật chính thức hoặc hướng dẫn của cơ quan có thẩm quyền.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>HƯỚNG DẪN THỦ TỤC CẤP PHIẾU LÝ LỊCH TƯ PHÁP</strong></p>
+    <p>Đề nghị kiểm tra, cập nhật nội dung trước khi công khai hoặc in mã QR phục vụ người dân.</p>
+  </footer>
+</body>
+</html>
